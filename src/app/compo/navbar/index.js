@@ -5,7 +5,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 
 function Navbar() {
-F
+
     const [activeMenu ,setActiveMenu] = useState('home')
     const [menu ,setmenu] = useState(false)
     return (
