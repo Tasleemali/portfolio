@@ -7,7 +7,7 @@ import third from "@/components/assets/third.png"
 
 function Header() {
     return (
-        <div id='header' className='bg-gray-900 text-white mt-10 pt-20'>
+        <div id='header' className='bg-gray-900 text-white  pt-20'>
 
             <div className='  mx-auto max-w-screen-xl  '>
 
