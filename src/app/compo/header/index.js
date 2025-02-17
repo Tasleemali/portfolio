@@ -26,10 +26,10 @@ function Header() {
 
                         <div>
                             <ul className='flex md:justify-start justify-center items-center gap-10 py-5'>
-                                <li className=" py-1 px-1 border-2 border-blue-500 text-blue-400 rounded-lg hover:shadow-custom-shadow transition-shadow duration-300"><Facebook className='w-4 h-4' /></li>
-                                <li className="  py-1 px-1 border-2 border-white text-white rounded-lg hover:shadow-customs-shadow transition-shadow duration-300"><X className='w-4 h-4' /></li>
-                                <li className=" py-1 px-1 border-2 border-rose-600 text-rose-600 rounded-lg hover:shadow-insta-shadow transition-shadow duration-300"><Instagram className='w-4 h-4' /></li>
-                                <li className=" py-1 px-1 border-2 border-blue-500 text-blue-400 rounded-lg hover:shadow-custom-shadow transition-shadow duration-300"><Linkedin className='w-4 h-4' /></li>
+                             <a href='https://www.facebook.com/tasleem.999'>  <li className=" py-1 px-1 border-2 border-blue-500 text-blue-400 rounded-lg hover:shadow-custom-shadow transition-shadow duration-300"><Facebook className='w-4 h-4' /></li></a> 
+                             <a href=''>  <li className="  py-1 px-1 border-2 border-white text-white rounded-lg hover:shadow-customs-shadow transition-shadow duration-300"><X className='w-4 h-4' /></li></a> 
+                           <a href='https://www.instagram.com/malik_tasleem0701?igsh=MW5iaXdkcDIyejBhMQ=='><li className=" py-1 px-1 border-2 border-rose-600 text-rose-600 rounded-lg hover:shadow-insta-shadow transition-shadow duration-300"><Instagram className='w-4 h-4' /></li></a>     
+                           <a href=''>   <li className=" py-1 px-1 border-2 border-blue-500 text-blue-400 rounded-lg hover:shadow-custom-shadow transition-shadow duration-300"><Linkedin className='w-4 h-4' /></li></a> 
                             </ul>
 
                             <a href='#contect'>  <Button className='border-2 border-red-500 rounded-2xl  text-white hover:border-blue-200 hover:bg-red-500  '>Hire me</Button></a>
@@ -49,4 +49,5 @@ function Header() {
 }
 
 export default Header
+
 
