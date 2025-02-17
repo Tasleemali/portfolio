@@ -26,13 +26,13 @@ function Navbar() {
                         <span className='text-3xl font-bold  self-center whitespace-nowrap text-red-500 shadow-lg'  >Tasleem.</span>
                     </div> 
 
-                    <div className={`${menu?'fixed':'hidden'} bg-slate-900 h-lvh  top-20 left-0 right-0 z-20  md:flex `}>
+                    <div className={`${menu?'fixed':'hidden'} bg-slate-900 h-lvh md:h-0  top-20 left-0 right-0 z-20  md:flex `}>
 {/* 
                         <span onClick={()=>setmenu(!menu)} className='md:hidden'>Back</span> */}
                     <ul className= '  flex  z-10 flex-col md:flex-row justify-between items-center gap-10'>
                    <a className='' href='#header'>    <li value={"home"}  onClick={()=> {setActiveMenu('home'),setmenu(false)}} className={`${activeMenu === 'home' ?"border-b border-red-500 text-red-500 ":''}`} >Home</li></a> 
                    <a href='#about'>   <li value={'about'} onClick={()=> {setActiveMenu('about'),setmenu(false)}}className={`${activeMenu === 'about' ?" border-b border-red-500 text-red-500":''}`} >About</li></a> 
-                   <a href='#project'>    <li value={"project"} onClick={()=> {setActiveMenu('project'),setmenu(false)}} className={`${activeMenu === 'project' ?"border-b border-red-500 text-red-500  ":''}`}>project</li></a> 
+                   <a href='#project'>    <li value={"project"} onClick={()=> {setActiveMenu('project'),setmenu(false)}} className={`${activeMenu === 'project' ?"border-b border-red-500 text-red-500  ":''}`}>Project</li></a> 
                   <a href='#contect'> <li value={"service"} onClick={()=> {setActiveMenu('service'),setmenu(false)}} className={`${activeMenu === 'service' ?"border-b border-red-500 text-red-500 ":''}`}>Contect</li></a>  
                     </ul>
                     </div>
