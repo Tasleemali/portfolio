@@ -2,22 +2,31 @@
 "use client"
 import { Menu } from 'lucide-react'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 
 function Navbar() {
 
     const [activeMenu ,setActiveMenu] = useState('home')
     const [menu ,setmenu] = useState(false)
+
+    const  [sticky ,setSticky] =useState(false)
+
+    useEffect(()=>{
+    window.addEventListener('scroll' , ()=>{
+      window.scrollY > 70? setSticky(true): setSticky(false)
+    })
+    
+    },[])
     return (
-        <div className='bg-gray-900 fixed  top-0 left-0 right-0  text-white '>
-            <div className= ' mx-auto max-w-screen-xl px-5 sm:px-8 md-px-10 py-10'>
+        <div className={` fixed  top-0 left-0 right-0  text-white  ${sticky? 'bg-slate-900':''}`}>
+            <div className= ' mx-auto max-w-screen-xl px-5 sm:px-8 md-px-10 py-5'>
 
                 <div className=' w-full flex justify-between items-center'>
                     <div className=''>
                         <span className='text-3xl font-bold  self-center whitespace-nowrap text-red-500 shadow-lg'  >Tasleem.</span>
                     </div> 
 
-                    <div className={`${menu?'fixed':'hidden'}  top-20 left-0 right-0 z-20  md:flex `}>
+                    <div className={`${menu?'fixed':'hidden'} bg-slate-900 h-lvh  top-20 left-0 right-0 z-20  md:flex `}>
 {/* 
                         <span onClick={()=>setmenu(!menu)} className='md:hidden'>Back</span> */}
                     <ul className= '  flex  z-10 flex-col md:flex-row justify-between items-center gap-10'>
@@ -46,3 +55,4 @@ function Navbar() {
 }
 
 export default Navbar
+
