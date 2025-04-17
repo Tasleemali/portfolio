@@ -1,48 +1,97 @@
-
 "use client"
-import { Menu } from 'lucide-react'
-import Link from 'next/link'
-import React, { useState } from 'react'
+
+import { AlignRightIcon, X } from 'lucide-react'
+import React, { useEffect, useState } from 'react'
 
 function Navbar() {
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
+  const [IsStckyMenu, setIsStickyMenu] = useState(false)
+  const [IsActive, setIsActive] = useState("home")
+  const [shake, setShake] = useState(false)
 
-    const [activeMenu ,setActiveMenu] = useState('home')
-    const [menu ,setmenu] = useState(false)
-    return (
-        <div className='bg-gray-900 text-white'>
-            <div className='mx-auto max-w-screen-xl px-5 sm:px-8 md-px-10 py-10'>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShake(true);
+      setTimeout(() => setShake(false), 1000)
+    }, 7000)
 
-                <div className=' w-full flex justify-between items-center'>
-                    <div className=''>
-                        <span className='text-3xl font-bold  self-center whitespace-nowrap text-red-500 shadow-lg'  >Tasleem.</span>
-                    </div> 
+    return () => clearInterval(interval)
+  }, [])
 
-                    <div className={`${menu?'fixed':'hidden'}  top-20 left-0 right-0 z-20  md:flex `}>
-{/* 
-                        <span onClick={()=>setmenu(!menu)} className='md:hidden'>Back</span> */}
-                    <ul className= '  flex  z-10 flex-col md:flex-row justify-between items-center gap-10'>
-                   <a className='' href='#header'>    <li value={"home"}  onClick={()=> {setActiveMenu('home'),setmenu(false)}} className={`${activeMenu === 'home' ?"border-b border-red-500 text-red-500 ":''}`} >Home</li></a> 
-                   <a href='#about'>   <li value={'about'} onClick={()=> {setActiveMenu('about'),setmenu(false)}}className={`${activeMenu === 'about' ?" border-b border-red-500 text-red-500":''}`} >About</li></a> 
-                   <a href='#project'>    <li value={"project"} onClick={()=> {setActiveMenu('project'),setmenu(false)}} className={`${activeMenu === 'project' ?"border-b border-red-500 text-red-500  ":''}`}>project</li></a> 
-                  <a href='#contect'> <li value={"service"} onClick={()=> {setActiveMenu('service'),setmenu(false)}} className={`${activeMenu === 'service' ?"border-b border-red-500 text-red-500 ":''}`}>Contect</li></a>  
-                    </ul>
-                    </div>
-                    <button
-            data-collapse-toggle="navbar-sticky"
-            type="button"
-            className="   inline-flex items-center p-2 text-sm text-white rounded-lg md:hidden hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
-            onClick={()=>setmenu(!menu)}
-           
-          >
-            <Menu className='w-10 h-10'/>
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsStickyMenu(window.scrollY > 150)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  return (
+    <div className={`text-white sticky top-0 z-20 transition-colors duration-500 ${IsStckyMenu ? "bg-[#0f172a] shadow-lg shadow-[#00ff9f]/10" : "bg-transparent"}`}>
+      <div className='max-w-screen-2xl mx-auto py-5'>
+        <nav className='flex justify-between items-center px-5'>
+
+          {/* Logo */}
+     <span className={`
+  text-3xl font-bold tracking-wide
+  ${shake ? 'animate-shake' : ''}
+  bg-white
+  bg-clip-text text-transparent 
+  drop-shadow-[4px_4px_0px_rgba(0,0,0,0.6)]
+  hover:drop-shadow-[0_0_10px_#f97316]
+  transition duration-300
+`}>
+  𝓣𝓪𝓼𝓵𝓮𝓮𝓶.
+</span>
+          {/* Desktop Nav */}
+          <ul className='hidden md:flex space-x-14 items-center text-white font-medium'>
+            {["home", "skills", "project", "contect"].map(section => (
+              <a key={section} href={`#${section}`}>
+                <li
+                  onClick={() => setIsActive(section)}
+                  className={`transition duration-300 cursor-pointer hover:text-[#00ff9f] ${
+                    IsActive === section ? "border-b-2 border-[#00ff9f]" : ""
+                  }`}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </li>
+              </a>
+            ))}
+          </ul>
+
+          {/* Mobile Nav */}
+          <div className={`md:hidden fixed top-0 right-0 z-30 p-5 w-full h-lvh bg-[#0f172a] transform ${isOpenMenu ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out`}>
+            <span onClick={() => setIsOpenMenu(false)} className='float-right'>
+              <X className='w-7 h-7' />
+            </span>
+            <ul className='mt-10 grid grid-cols-1 place-items-center space-y-10 text-white text-xl font-medium'>
+              {["home", "skills", "project", "contect"].map(section => (
+                <a key={section} href={`#${section}`}>
+                  <li
+                    onClick={() => {
+                      setIsOpenMenu(false)
+                      setIsActive(section)
+                    }}
+                    className={`transition duration-300 hover:text-[#00ff9f] ${
+                      IsActive === section ? "border-b-2 border-[#00ff9f]" : ""
+                    }`}
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </li>
+                </a>
+              ))}
+            </ul>
+          </div>
+
+          {/* Menu Button */}
+          <button onClick={() => setIsOpenMenu(true)} className='md:hidden'>
+            <AlignRightIcon className='w-7 h-7' />
           </button>
-
-                </div>
-            </div>
-        </div>
-    )
+        </nav>
+      </div>
+    </div>
+  )
 }
 
 export default Navbar
+

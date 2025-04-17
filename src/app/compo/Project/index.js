@@ -1,45 +1,53 @@
 import Image from "next/image";
-
- import project from "@/components/assets/project.png"
-// ];
+import project from "@/components/assets/project.png";
+import summary from '@/components/assets/summary.png';
+import youth from "@/components/assets/youth.png";
 
 export default function Projects() {
-    return (
-      <div id="project" className="py-12 bg-red-500 ">
-         <div className="mx-auto max-w-screen-xl">
-
-        <div className="mx-auto px-6">
-          <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6">Projects</h2>
-          <div className=" w-full flex flex-col space-y-10 justify-center items-center">
-          
-              <div  className="bg-red-500 p-4 rounded-lg shadow-lg flex flex-col md:flex-row justify-center items-center gap-10">
-                <Image src={project} alt='img'  className=" w-[200px] h-[130px] rounded-lg" />
-                <div>
-                <h3 className="text-xl font-semibold mt-4">Next.js food delivery Platform with Tailwind & MongoDB,</h3>
-                <p className="text-white mt-2">Experience a seamless shopping experience with our modern e-commerce platform, built using Next.js, Tailwind CSS, and MongoDB. Our website offers a fast, responsive, and user-friendly interface with secure authentication to protect your accountz</p>
-                <a href='https://food-sigma-eight.vercel.app' className="mt-4 inline-block px-4 py-2 bg-slate-800 border-2 border-red-500 text-white rounded-md hover:bg-black">
-                  Visit Website
-                </a>
-                </div>
-
-              </div>
-              {/* 1 */}
-             
-              <div  className="bg-red-500 p-4 rounded-lg shadow-lg flex flex-col md:flex-row justify-center items-center gap-10">
-              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrjbCJACzGX_GdZxgZWTk5KNGF0Cf1X1y7Xw&s' alt='img' width={500} height={300} className="rounded-lg" />
-                <div>
-                <h3 className="text-xl font-semibold mt-4">Next.js E-Commerce Platform with Tailwind & MongoDB,</h3>
-                <p className="text-white mt-2">Enjoy fast and convenient food delivery with our modern web application, built using Next.js, Tailwind CSS, and MongoDB. Our platform offers a smooth, user-friendly experience with secure authentication, real-time order tracking, and an optimized checkout process.</p>
-                <a href='' className="mt-4 inline-block px-4 py-2 bg-black border-2 border-red-500 text-white rounded-md">
-                  Visit Website
-                </a>
-                </div>
-
-              </div>
-          </div>
-          
+  return (
+    <div id="project" className="bg-gradient-to-b from-[#0f172a] via-black to-[#0f172a] text-white px-5 w-full">
+      <div className="w-full py-10 flex flex-col items-center gap-10 max-w-6xl mx-auto">
+        
+        <div className="text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-2">
+            My <span className="text-emerald-400">Projects</span>
+          </h2>
+          <h3 className="text-xl sm:text-2xl font-semibold text-blue-300 mb-4">
+            Real-World <span className="text-gray-100">Work!</span>
+          </h3>
+          <p className="text-base sm:text-lg leading-relaxed text-gray-300 max-w-3xl">
+            Here are some of my latest projects built using Next.js, Tailwind CSS, and MongoDB. These showcase my skills in building fast, responsive, and modern web applications with beautiful UIs and smooth functionality.
+          </p>
         </div>
+
+        <div className="flex flex-col gap-10 w-full">
+          {[project, summary, youth].map((img, index) => (
+            <div
+              key={index}
+              className="bg-[#0a1e23] p-6 rounded-xl shadow-xl flex flex-col md:flex-row items-center gap-8"
+            >
+              <Image
+                src={img}
+                alt="Project"
+                className="w-[240px] h-[140px] rounded-lg object-cover"
+              />
+              <div className="text-center md:text-left">
+                <h3 className="text-xl font-bold text-emerald-300">Next.js Food Delivery Platform</h3>
+                <p className="text-gray-300 mt-2">
+                  Experience a seamless shopping experience with our modern e-commerce platform, built using Next.js, Tailwind CSS, and MongoDB. Fast, responsive, and secure – crafted with real-world UX in mind.
+                </p>
+                <a
+                  href="https://food-sigma-eight.vercel.app"
+                  target="_blank"
+                  className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
+                >
+                  Visit Website
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}

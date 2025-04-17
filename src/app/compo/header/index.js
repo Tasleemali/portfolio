@@ -1,48 +1,75 @@
-import { Button } from '@/components/ui/button'
+"use client"
 import { Facebook, Instagram, Linkedin, X } from 'lucide-react'
-import React from 'react'
+import Image from 'next/image'
+import React, { useState ,useEffect } from 'react'
+import third from "@/components/assets/third.png"
 
-function Header() {
+
+export default function HeroSection() {
+
+    const [shake, setShake] = useState(false)
+    
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setShake(true);
+          setTimeout(() => setShake(false), 1000)
+        }, 7000)
+    
+        return () => clearInterval(interval)
+      }, [])
     return (
-        <div id='header' className='bg-gray-900 text-white'>
+        <section id='home' className="w-full px-4 py-10 bg-black text-white">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10">
 
-            <div className='mx-auto max-w-screen-xl  '>
-                 
-                <div className=' mx-10 px-10 py-10 flex flex-wrap justify-center items-center text-center md:text-start ite md:gap-10'>
-
-               <div className='md:w-auto' >
-                <img className=' w-[250px] md:w-[300px] rounded-full text-right' src='https://thumbs.dreamstime.com/b/portrait-young-handsome-happy-man-wearing-glasses-casual-smart-blue-clothing-yellow-color-background-square-composition-200740125.jpg' alt='photo'/>
-               </div>
-
-                <div className=' md:w-auto px-5 text-wrap'>
-                   <h1 className=' text-xl sm:text-2xl md:text-4xl'>Hi,It's <span className='text-red-500'>Tasleem</span> </h1>
-                   <h3 className='text-xl'>I'm a <span className='text-red-500'> Web Devloper</span></h3>
-                   <p className='  text-xm sm:text-sm md:text-lg md:w-[400px] text-wrap'>Passionate about creating user-centric, responsive websites. I specialize in front-end and back-end development to bring your ideas to life. Let’s build something amazing together!
-
-                  </p>
-                  
-                  <div>
-                    <ul className='flex md:justify-start justify-center items-center gap-10 py-5'>
-                        <li className=" py-1 px-1 border-2 border-blue-500 text-blue-400 rounded-lg hover:shadow-custom-shadow transition-shadow duration-300"><Facebook className='w-4 h-4'/></li>
-                        <li className="  py-1 px-1 border-2 border-white text-white rounded-lg hover:shadow-customs-shadow transition-shadow duration-300"><X className='w-4 h-4'/></li>
-                        <li className=" py-1 px-1 border-2 border-rose-600 text-rose-600 rounded-lg hover:shadow-insta-shadow transition-shadow duration-300"><Instagram className='w-4 h-4' /></li>
-                        <li className=" py-1 px-1 border-2 border-blue-500 text-blue-400 rounded-lg hover:shadow-custom-shadow transition-shadow duration-300"><Linkedin className='w-4 h-4'/></li>
-                   </ul>
-
-                   <Button className='border-2 border-red-500 rounded-2xl  text-white hover:border-blue-200 hover:bg-red-500  '>More About me</Button>
-                  </div>
+                {/* Profile Image */}
+                <div className={`flex-shrink-0 ${shake ? 'animate-shakeY' : ''} `}>
+                    <Image
+                        src={third}
+                        alt="Tasleem Profile Photo"
+                        width={300}
+                        height={300}
+                        className="rounded-full w-64 h-64 md:w-72 md:h-72 object-cover border-4 border-emerald-400 shadow-xg"
+                    />
                 </div>
 
-                <div>
+                {/* Text Content */}
+                <div className="text-center lg:text-left max-w-2xl">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 text-white">
+                        Hi, It's <span className="text-emerald-400">𝕋𝕒𝕤𝕝𝕖𝕖𝕞</span>
+                    </h1>
+                    <h2 className="text-xl sm:text-2xl mb-4">
+                        I'm a <span className="text-blue-400">Web Developer</span>
+                    </h2>
+                    <p className="text-sm sm:text-base md:text-lg text-gray-300">
+                        Passionate about creating user-centric, responsive websites. I specialize in front-end and back-end development to bring your ideas to life. Let’s build something amazing together!
+                    </p>
 
+                    {/* Social Icons */}
+                    <ul className="flex justify-center lg:justify-start items-center gap-6 mt-6">
+                        <li className="p-2 text-blue-500 hover:text-emerald-400 rounded-full hover:shadow-md hover:scale-125 transition">
+                            <Facebook className="w-5 h-5" />
+                        </li>
+                        <li className="p-2 text-white hover:text-emerald-400 rounded-full hover:shadow-md hover:scale-125 transition">
+                            <X className="w-5 h-5" />
+                        </li>
+                        <li className="p-2 text-pink-500 hover:text-emerald-400 rounded-full hover:shadow-md hover:scale-125 transition">
+                            <Instagram className="w-5 h-5" />
+                        </li>
+                        <li className="p-2 text-blue-500 hover:text-emerald-400 rounded-full hover:shadow-md hover:scale-125 transition">
+                            <Linkedin className="w-5 h-5" />
+                        </li>
+                    </ul>
+
+                    {/* Hire Me Button */}
+                    <div className="mt-6">
+                        <a href="#contact">
+                            <button className="rounded shadow-lg transition px-4 py-2 text-white bg-emerald-500 hover:bg-emerald-600">
+                                Hire Me
+                            </button>
+                        </a>
+                    </div>
                 </div>
-
             </div>
-
-
-            </div>
-        </div>
+        </section>
     )
 }
-
-export default Header
