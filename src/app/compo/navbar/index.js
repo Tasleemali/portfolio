@@ -28,7 +28,7 @@ function Navbar() {
 
   return (
     <div className={`text-white sticky top-0 z-20 transition-colors duration-500 ${IsStckyMenu ? "bg-[#0f172a] shadow-lg shadow-[#00ff9f]/10" : "bg-transparent"}`}>
-      <div className='max-w-screen-2xl mx-auto py-5'>
+      <div className='max-w-screen-2xl mx-auto py-3 md:py-5'>
         <nav className='flex justify-between items-center px-5'>
 
           {/* Logo */}
