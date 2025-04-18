@@ -83,7 +83,7 @@ export default function Projects() {
               <p className="text-gray-300 mt-2">
               Youth is a modern e-commerce website built with Next.js, Tailwind CSS, and MongoDB. It features smooth navigation, secure JWT authentication, a dynamic cart with Context API, and seamless payment integration using Razorpay. </p>
               <a
-                href="https://food-sigma-eight.vercel.app"
+                href="new-youth.vercel.app"
                 target="_blank"
                 className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
               >
