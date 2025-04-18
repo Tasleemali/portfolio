@@ -21,20 +21,20 @@ export default function Projects() {
         </div>
 
         <div className="flex flex-col gap-10 w-full">
-          {[project, summary, youth].map((img, index) => (
+       
             <div
-              key={index}
+            
               className="bg-[#0a1e23] p-6 rounded-xl shadow-xl flex flex-col md:flex-row items-center gap-8"
             >
               <Image
-                src={img}
+                src={project}
                 alt="Project"
                 className="w-[240px] h-[140px] rounded-lg object-cover"
               />
               <div className="text-center md:text-left">
-                <h3 className="text-xl font-bold text-emerald-300">Next.js Food Delivery Platform</h3>
+                <h3 className="text-xl font-bold text-emerald-300">Next.js Food Delivery Website</h3>
                 <p className="text-gray-300 mt-2">
-                  Experience a seamless shopping experience with our modern e-commerce platform, built using Next.js, Tailwind CSS, and MongoDB. Fast, responsive, and secure – crafted with real-world UX in mind.
+                  Experience a seamless shopping experience with our food Delivery platform, built using Next.js, Tailwind CSS, and MongoDB. Fast, responsive, and secure – crafted with real-world UX in mind.
                 </p>
                 <a
                   href="https://food-sigma-eight.vercel.app"
@@ -45,7 +45,52 @@ export default function Projects() {
                 </a>
               </div>
             </div>
-          ))}
+            {/* 1 */}
+            <div
+            
+            className="bg-[#0a1e23] p-6 rounded-xl shadow-xl flex flex-col md:flex-row items-center gap-8"
+          >
+            <Image
+              src={summary}
+              alt="Project"
+              className="w-[240px] h-[140px] rounded-lg object-cover"
+            />
+            <div className="text-center md:text-left">
+              <h3 className="text-xl font-bold text-emerald-300">QuickRead Summary Blog Website</h3>
+              <p className="text-gray-300 mt-2">
+              QuickRead is a sleek and responsive book summary website built with Next.js and Tailwind CSS. It delivers detailed, chapter-wise summaries in a clean, easy-to-read format, helping users grasp key insights quickly and efficiently. </p>
+              <a
+                href="https://food-sigma-eight.vercel.app"
+                target="_blank"
+                className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
+              >
+                Visit Website
+              </a>
+            </div>
+          </div>
+          {/* 2 */}
+          <div
+            
+            className="bg-[#0a1e23] p-6 rounded-xl shadow-xl flex flex-col md:flex-row items-center gap-8"
+          >
+            <Image
+              src={youth}
+              alt="Project"
+              className="w-[240px] h-[140px] rounded-lg object-cover"
+            />
+            <div className="text-center md:text-left">
+              <h3 className="text-xl font-bold text-emerald-300">Youth E-commerce Website</h3>
+              <p className="text-gray-300 mt-2">
+              Youth is a modern e-commerce website built with Next.js, Tailwind CSS, and MongoDB. It features smooth navigation, secure JWT authentication, a dynamic cart with Context API, and seamless payment integration using Razorpay. </p>
+              <a
+                href="https://food-sigma-eight.vercel.app"
+                target="_blank"
+                className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
+              >
+                Visit Website
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
