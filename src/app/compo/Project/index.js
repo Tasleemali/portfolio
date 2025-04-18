@@ -83,13 +83,8 @@ export default function Projects() {
               <h3 className="text-xl font-bold text-emerald-300">Youth E-commerce Website</h3>
               <p className="text-gray-300 mt-2">
               Youth is a modern e-commerce website built with Next.js, Tailwind CSS, and MongoDB. It features smooth navigation, secure JWT authentication, a dynamic cart with Context API, and seamless payment integration using Razorpay. </p>
-              <Link
-                href="new-youth.vercel.app"
-              
-                className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
-              >
-                Visit Website
-              </Link>
+               <a href="https://new-youth.vercel.app/"><button className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
+            > Visit Website</button></a>
             </div>
           </div>
         </div>
