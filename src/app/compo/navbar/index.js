@@ -41,7 +41,7 @@ function Navbar() {
   hover:drop-shadow-[0_0_10px_#f97316]
   transition duration-300
 `}>
-  𝓣𝓪𝓼𝓵𝓮𝓮𝓶.
+  Tasleem.
 </span>
           {/* Desktop Nav */}
           <ul className='hidden md:flex space-x-14 items-center text-white font-medium'>
