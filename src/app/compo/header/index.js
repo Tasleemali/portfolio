@@ -35,7 +35,7 @@ export default function HeroSection() {
                 {/* Text Content */}
                 <div className="text-center lg:text-left max-w-2xl">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 text-white">
-                        Hi, It's <span className="text-emerald-400">𝕋𝕒𝕤𝕝𝕖𝕖𝕞</span>
+                        Hi, It's <span className="text-emerald-400">Tasleem</span>
                     </h1>
                     <h2 className="text-xl sm:text-2xl mb-4">
                         I'm a <span className="text-blue-400">Web Developer</span>
