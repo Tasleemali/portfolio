@@ -39,7 +39,7 @@ export default function Projects() {
                 </p>
                 <a
                   href="https://food-sigma-eight.vercel.app"
-                  target="_blank"
+                  
                   className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
                 >
                   Visit Website
@@ -62,7 +62,7 @@ export default function Projects() {
               QuickRead is a sleek and responsive book summary website built with Next.js and Tailwind CSS. It delivers detailed, chapter-wise summaries in a clean, easy-to-read format, helping users grasp key insights quickly and efficiently. </p>
               <a
                 href="https://food-sigma-eight.vercel.app"
-                target="_blank"
+            
                 className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
               >
                 Visit Website
@@ -84,8 +84,8 @@ export default function Projects() {
               <p className="text-gray-300 mt-2">
               Youth is a modern e-commerce website built with Next.js, Tailwind CSS, and MongoDB. It features smooth navigation, secure JWT authentication, a dynamic cart with Context API, and seamless payment integration using Razorpay. </p>
               <Link
-                href="new-youth-lvk5ltz9v-tasleems-projects-36a6c002.vercel.app"
-                target="_blank"
+                href="new-youth.vercel.app"
+              
                 className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
               >
                 Visit Website
