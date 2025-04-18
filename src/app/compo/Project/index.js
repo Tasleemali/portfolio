@@ -2,6 +2,7 @@ import Image from "next/image";
 import project from "@/components/assets/project.png";
 import summary from '@/components/assets/summary.png';
 import youth from "@/components/assets/youth.png";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -82,13 +83,13 @@ export default function Projects() {
               <h3 className="text-xl font-bold text-emerald-300">Youth E-commerce Website</h3>
               <p className="text-gray-300 mt-2">
               Youth is a modern e-commerce website built with Next.js, Tailwind CSS, and MongoDB. It features smooth navigation, secure JWT authentication, a dynamic cart with Context API, and seamless payment integration using Razorpay. </p>
-              <a
-                href="new-youth.vercel.app"
+              <Link
+                href="https://food-sigma-eight.vercel.app"
                 target="_blank"
                 className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
               >
                 Visit Website
-              </a>
+              </Link>
             </div>
           </div>
         </div>
