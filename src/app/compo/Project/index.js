@@ -60,13 +60,8 @@ export default function Projects() {
               <h3 className="text-xl font-bold text-emerald-300">QuickRead Summary Blog Website</h3>
               <p className="text-gray-300 mt-2">
               QuickRead is a sleek and responsive book summary website built with Next.js and Tailwind CSS. It delivers detailed, chapter-wise summaries in a clean, easy-to-read format, helping users grasp key insights quickly and efficiently. </p>
-              <a
-                href="https://food-sigma-eight.vercel.app"
-            
-                className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
-              >
-                Visit Website
-              </a>
+               <a href="https://quick-read-delta.vercel.app/"><button className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
+            > Visit Website</button></a>
             </div>
           </div>
           {/* 2 */}
