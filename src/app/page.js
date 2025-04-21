@@ -1,12 +1,11 @@
-import Image from "next/image";
-import Navbar from "./compo/navbar";
-import Header from "./compo/header";
-import About from "./compo/about.js";
-import Skills from "./compo/skills";
-import Projects from "./compo/Project";
-import Contact from "./compo/contect";
-import HeroSection from "./compo/header";
-import AboutMe from "./compo/about.js";
+
+import Navbar from "./section-page/navbar";
+
+import Skills from "./section-page/skills";
+import Projects from "./section-page/Project";
+import Contact from "./section-page/contact";
+import HeroSection from "./section-page/header";
+import AboutMe from "./section-page/about.js/index.js";
 
 
 export default function Home() {

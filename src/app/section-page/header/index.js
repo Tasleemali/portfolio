@@ -18,7 +18,7 @@ export default function HeroSection() {
         return () => clearInterval(interval)
       }, [])
     return (
-        <section id='home' className="w-full px-4 py-10 bg-black text-white">
+        <section id='Home' className="w-full px-4 py-10 bg-black text-white">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10">
 
                 {/* Profile Image */}
@@ -35,7 +35,7 @@ export default function HeroSection() {
                 {/* Text Content */}
                 <div className="text-center lg:text-left max-w-2xl">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 text-white">
-                        Hi, It's <span className="text-emerald-400">𝕋𝕒𝕤𝕝𝕖𝕖𝕞</span>
+                        Hi, It's <span className="text-emerald-400">Tasleem</span>
                     </h1>
                     <h2 className="text-xl sm:text-2xl mb-4">
                         I'm a <span className="text-blue-400">Web Developer</span>
@@ -64,7 +64,7 @@ export default function HeroSection() {
                     <div className="mt-6">
                         <a href="#contact">
                             <button className="rounded shadow-lg transition px-4 py-2 text-white bg-emerald-500 hover:bg-emerald-600">
-                                Hire Me
+                                Contect Me
                             </button>
                         </a>
                     </div>

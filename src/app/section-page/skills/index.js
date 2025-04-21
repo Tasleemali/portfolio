@@ -13,7 +13,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <div id='skills' className='bg-gradient-to-b bg-black text-white py-16 px-6'>
+    <div id='Skills' className='bg-gradient-to-b bg-black text-white py-16 px-6'>
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
           My <span className="text-emerald-400">Skills</span>

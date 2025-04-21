@@ -28,7 +28,7 @@ function Navbar() {
 
   return (
     <div className={`text-white sticky top-0 z-20 transition-colors duration-500 ${IsStckyMenu ? "bg-[#0f172a] shadow-lg shadow-[#00ff9f]/10" : "bg-transparent"}`}>
-      <div className='max-w-screen-2xl mx-auto py-5'>
+      <div className='max-w-screen-2xl mx-auto py-3 md:py-5'>
         <nav className='flex justify-between items-center px-5'>
 
           {/* Logo */}
@@ -41,11 +41,11 @@ function Navbar() {
   hover:drop-shadow-[0_0_10px_#f97316]
   transition duration-300
 `}>
-  𝓣𝓪𝓼𝓵𝓮𝓮𝓶.
+  Tasleem.
 </span>
           {/* Desktop Nav */}
           <ul className='hidden md:flex space-x-14 items-center text-white font-medium'>
-            {["home", "skills", "project", "contect"].map(section => (
+            {["Home", "About" ,"Skills", "Project", ].map(section => (
               <a key={section} href={`#${section}`}>
                 <li
                   onClick={() => setIsActive(section)}
@@ -65,7 +65,7 @@ function Navbar() {
               <X className='w-7 h-7' />
             </span>
             <ul className='mt-10 grid grid-cols-1 place-items-center space-y-10 text-white text-xl font-medium'>
-              {["home", "skills", "project", "contect"].map(section => (
+              {["Home","About" , "Skills", "Project", ].map(section => (
                 <a key={section} href={`#${section}`}>
                   <li
                     onClick={() => {

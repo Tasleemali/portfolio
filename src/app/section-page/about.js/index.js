@@ -3,7 +3,7 @@
 export default function AboutMe() {
   return (
     <div
-      id="about"
+      id="About"
       className="bg-gradient-to-b from-[#0f172a] via-black to-[#0f172a] text-white px-5 w-full"
     >
       <div className="w-full py-10 flex flex-col md:flex-row items-center md:items-start gap-8">
