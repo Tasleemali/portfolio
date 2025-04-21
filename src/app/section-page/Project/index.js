@@ -38,7 +38,7 @@ export default function Projects() {
                   Experience a seamless shopping experience with our food Delivery platform, built using Next.js, Tailwind CSS, and MongoDB. Fast, responsive, and secure – crafted with real-world UX in mind.
                 </p>
                 <a
-                  href="https://food-sigma-eight.vercel.app"
+                  href="https://food-one-kappa.vercel.app/"
                   target="_blank"
                   className="mt-4 inline-block px-5 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
                 >
