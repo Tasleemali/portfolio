@@ -64,7 +64,7 @@ export default function HeroSection() {
                     <div className="mt-6">
                         <a href="#contact">
                             <button className="rounded shadow-lg transition px-4 py-2 text-white bg-emerald-500 hover:bg-emerald-600">
-                                Contect Me
+                                Contact Me
                             </button>
                         </a>
                     </div>
